@@ -27,7 +27,8 @@
         'security/ir.model.access.csv',
         'views/academy_menuitems.xml', # Antes estaba de primero
         'views/course_views.xml',
-        'views/session_views.xml'
+        'views/session_views.xml',
+        'views/sale_views_inherit.xml',
     ],
     
     'demo': [
