@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Odoo Academy Cesar',
+    'name': 'Odoo Academy',
     
-    'summary': "Academy app to manage Training Cesar",
+    'summary': "Academy app to manage Training",
     
     'description': """
         Academy Module to manage Training:
@@ -20,13 +20,17 @@
     'category': 'Training',
     'version': '0.1',
     
-    'depends': ['base'],
+    'depends': ['sale'], # antes estaba 'base' cambiado a 'sale'
     
     'data': [
-        
+        'security/academy_security.xml',
+        'security/ir.model.access.csv',
+        'views/academy_menuitems.xml', # Antes estaba de primero
+        'views/course_views.xml',
+        'views/session_views.xml'
     ],
     
-    'demp': [
-        
+    'demo': [
+        'demo/academy_demo.xml'
     ],
 }
