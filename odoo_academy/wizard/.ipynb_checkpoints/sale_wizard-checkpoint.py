@@ -9,7 +9,7 @@ class SaleWizard(models.TransientModel):
     def _default_session(self):
         return self.env['academy.session'].browse(self._context.get('active_id'))
     
-    session_id = fields.Man2one(comodel_name='academy.session',
+    session_id = fields.Many2one(comodel_name='academy.session',
                                 string='Session',
                                 required=True,
                                 default=_default_session)
