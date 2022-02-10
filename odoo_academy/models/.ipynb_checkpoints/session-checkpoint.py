@@ -33,7 +33,7 @@ class Session(models.Model):
     
     # State agregado en el video de Wizards
     state = fields.Selection(string='States',
-                            selection=[('draft', 'Draft').
+                            selection=[('draft', 'Draft'),
                                        ('open', 'In Progress'),
                                        ('done', 'Done'),
                                        ('canceled', 'Canceled')],
