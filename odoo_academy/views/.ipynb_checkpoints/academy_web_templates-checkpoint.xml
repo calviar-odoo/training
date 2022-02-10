@@ -27,7 +27,7 @@
                                         <t t-esc="session.name"/>
                                     </a>
                                 </p>
-                                <p>Last Mofified>
+                                <p>Last Mofified:
                                     <i t-field="session.write_date" t-field-options='{"format": "long"}'/>
                                 </p>
                             </t>
@@ -63,6 +63,6 @@
                     </div>
                 </div>
             </t>
-        </template>>
+        </template>
     </data>
 </odoo>
