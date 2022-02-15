@@ -28,6 +28,8 @@ class Course(models.Model):
                                   inverse_name='course_id',
                                   string='Sessions')    # Enlace al modelo session.py
     
+    pdf_invoice = fields.Binary(string='Factura en PDF')
+    
     
     
     @api.onchange('base_price','additional_fee')
