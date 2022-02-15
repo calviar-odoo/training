@@ -20,7 +20,7 @@
     'category': 'Training',
     'version': '0.1',
     
-    'depends': ['sale', 'website'], # antes estaba 'base' cambiado a 'sale'
+    'depends': ['sale', 'website', 'account'], # Añadido "account_move"
     
     'data': [
         'security/academy_security.xml',
