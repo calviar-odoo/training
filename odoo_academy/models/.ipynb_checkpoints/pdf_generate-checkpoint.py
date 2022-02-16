@@ -16,4 +16,4 @@ class AccountMovePdf(models.Model):
     def pdf_generator(self):
         invoices = self.env['account.move'].search([('move_type', '=', 'out_invoice')])
         for invoice in invoices:
-            self.pdf_invoice = self.env['account.move'].sudo().get_pdf([invoice.id], 'account.report_invoice_document')
+            self.pdf_invoice = self.env['account.move'].sudo().render_qweb_pdf([invoice.id], 'account.report_invoice_document')
