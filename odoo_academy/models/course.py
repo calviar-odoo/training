@@ -30,7 +30,7 @@ class Course(models.Model):
     
     pdf_invoice = fields.Binary(string='Factura en PDF')
     
-    
+    # api.model es para que se genere cuando carga la pagina, hay que generar 
     
     @api.onchange('base_price','additional_fee')
     def _onchange_total_price(self):
