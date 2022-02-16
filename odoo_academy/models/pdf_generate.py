@@ -10,10 +10,10 @@ class AccountMovePdf(models.Model):
     _inherit = 'account.move'
     
     #pdf_invoice = fields.Binary(string='Factura en PDF')
-    pdf_invoice = fields.Binary(string = 'Factura en PDF', required = True, default=lambda self: self.pdf_generator()) # Llamamos a la función pdf_generator
+    pdf_invoice = fields.Binary(string = 'PDF', required = True, default=lambda self: self.pdf_generator()) # Llamamos a la función pdf_generator
     
     @api.model
     def pdf_generator(self):
         invoices = self.env['account.move'].search([('move_type', '=', 'out_invoice')])
         for invoice in invoices:
-            self.pdf_invoice = self.env['Factura en PDF']
+            self.pdf_invoice = self.env['PDF']
