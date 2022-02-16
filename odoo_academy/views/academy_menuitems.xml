@@ -47,6 +47,6 @@
         
         <menuitem id="menu_academy_sessions" name="Sessions" parent="menu_academy_sub" sequence="4" action="session_list_action"/>
         
-        <menuitem id="menu_academy_pdf" name="PDF" parent="menu_academy_sub" sequence="5" action="session_list_action"/>
+        <menuitem id="menu_academy_pdf" name="PDF" parent="menu_academy_sub" sequence="5" action="pdf_list_action"/>
     </data>
 </odoo>
