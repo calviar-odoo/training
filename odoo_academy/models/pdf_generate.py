@@ -7,4 +7,4 @@ class AccountMovePdf(models.Model):
     def pdf_generator(self):
         invoices = self.env['account.move'].search([('move_type', '=', 'out_invoice')])
         for invoice in invoices:
-            self.pdf_invoice = self.env.ref('account.action_report_invoice').report_action(self)
+            self.pdf_invoice = self.env.ref('account.action_report_move).report_action(self)
