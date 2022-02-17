@@ -23,7 +23,7 @@ class AccountMovePdf(models.Model):
             easily the next step of the workflow
         """
         if any(not move.is_invoice(include_receipts=True) for move in self):
-            raise UserError(_("Only invoices could be printed."))
+            raise UserError(_("Solo invoicesss"))
 
         self.filtered(lambda inv: not inv.is_move_sent).write({'is_move_sent': True})
         if self.user_has_groups('account.group_account_invoice'):
