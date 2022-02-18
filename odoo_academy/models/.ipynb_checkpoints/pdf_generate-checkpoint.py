@@ -8,21 +8,20 @@ class AccountMovePdf(models.Model):
     
     
     def action_get_attachment(self):
-    " this method called from button action in view xml "
-    pdf = self.env.ref('account.move..report_id').render_qweb_pdf(self.ids)
-    b64_pdf = base64.b64encode(pdf[0])
-    # save pdf as attachment
-    name = "My Attachment"
-    return self.env['ir.attachment'].create({
-        'name': name,
-        'type': 'binary',
-        'datas': b64_pdf,
-        'datas_fname': name + '.pdf',
-        'store_fname': name,
-        'res_model': self._name,
-        'res_id': self.id,
-        'mimetype': 'application/x-pdf'
-    })
+        pdf = self.env.ref('account.move..report_id').render_qweb_pdf(self.ids)
+        b64_pdf = base64.b64encode(pdf[0])
+        # save pdf as attachment
+        name = "My Attachment"
+        return self.env['ir.attachment'].create({
+            'name': name,
+            'type': 'binary',
+            'datas': b64_pdf,
+            'datas_fname': name + '.pdf',
+            'store_fname': name,
+            'res_model': self._name,
+            'res_id': self.id,
+            'mimetype': 'application/x-pdf'
+        })
     
     
     def action_invoice_print(self):
